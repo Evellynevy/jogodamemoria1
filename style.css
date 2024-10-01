@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin:  0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("../img/tartaruga3.webp");
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1rf 2rf 1rf;
+    grid-template-rows: repeat(5,200px);
+    gap: 10px;
+    grid-template-areas:'title title title'
+                        '. result .'
+                        '. cartas .'
+                        '. cartas .'
+                        '. button .'
+}
+.result{
+    margin-top: 40px;
+    border-radius:  10px;
+    background-color: #E9F4F6;
+    display: flex;
+    grid-area: result;
+    justify-content: center;
+    align-items: center;
+
+}
+h1{
+    font-size: 70px;
+    padding-top: 5%;
+    grid-area: title;
+    text-align: center;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+
+}
+
+h2{
+margin: 5%;
+flex-direction: row;
+}
+.main{
+    position: relative;
+    grid-area: cartas;
+    display: flex;
+
+
+}
+.grid{
+    position: absolute;
+    padding: 10px;
+    justify-content: center;
+    gap: 10px;
+    display:flex ;
+    flex-wrap: wrap;
+}
+
+.imagem{
+    width: 100px;
+    height: 100px;
+}
+button{
+  
+    width: 40%;
+    height:30%;
+border-radius: 30%;
+background: #00ff37;
+    font-size: 20px;
+
+}
+
+#btn-reiniciar {
+    display: none;
+    grid-area: button;
+justify-content: center;
+align-items: center;
+}
